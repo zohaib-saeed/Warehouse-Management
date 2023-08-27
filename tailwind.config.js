@@ -1,20 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    // './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    // './components/**/*.{js,ts,jsx,tsx,mdx}',
-    // './app/**/*.{js,ts,jsx,tsx,mdx}',
-
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      fontFamily: {
-        noto: ['var(--notosans-font)'],
-      },
       colors: {
-        primary: '#7e22ce',
-        orange: '#FF4F00',
+        primary: '#337357',
+        secondary: '#e84414',
         gray: {
           dark: '#A9A9A9',
           storm: '#6D767E',
@@ -29,12 +20,25 @@ module.exports = {
           bright: '#344054',
           snow: '#F9FAFB',
         },
+        blue: {
+          midnight: '#0B1031',
+          riverbed: '#444862',
+          cornflower: '#5A7AF9',
+          vampire: '#475467',
+          warm: '#4965CA',
+          fuchsia: '#7B56BD',
+        },
+        black: {
+          main: '#000000',
+        },
+        white: {
+          main: '#fff',
+          zircon: '#F5F7F9',
+          ghost: '#F8F9FE',
+        },
         venus: '#838C9A',
         zues: '#242424',
-        black: '#000000',
         onyx: '#161616',
-        white: '#fff',
-        snow: '#f8f9fa',
       },
       screens: {
         xs: '480px',
