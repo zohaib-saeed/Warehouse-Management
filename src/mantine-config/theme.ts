@@ -9,6 +9,8 @@ export const theme: MantineThemeOverride = {
     xl: '80em',
   },
   colors: {
+    primary: ['#337357'],
+    secondary: ['#e84414'],
     error: ['#D92D20'],
     success: ['#12B76A'],
     blue: ['#0B1031', '#444862', '#5A7AF9', '#475467', '#4965CA'],

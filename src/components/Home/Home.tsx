@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumbs, ActionIcon, Input } from '@mantine/core';
+import { Breadcrumbs, ActionIcon, Input, Tooltip } from '@mantine/core';
 import { BsArrowLeft as ArrowLeft } from 'react-icons/bs';
 import { AiOutlineScan as ScanIcon } from 'react-icons/ai';
 
@@ -8,6 +8,9 @@ import NextLink from '../Shared/NextLink';
 import Typography from '../Shared/Typography';
 import Buttons from '../Shared/Buttons';
 import ShippingDetails from './Subs/ShippingDetails';
+import NextImage from '../Shared/NextImage';
+import Pagination from '../Shared/Pagination';
+import ShipmentLines from './Subs/ShipmentLines';
 
 const Home: React.FC = () => {
   // Breadcrumbs
@@ -22,19 +25,6 @@ const Home: React.FC = () => {
       />
     </NextLink>
   ));
-
-  //   Shipment Lines Table Header Items
-  const tableHeader = [
-    'Image',
-    'Item ID',
-    'Desc',
-    'Color',
-    'Size',
-    'MRP',
-    'Current Qty',
-    'Packed Qty',
-    'Cancel Qty',
-  ];
 
   return (
     <Wrapper styles="flex-col items-center justify-start gap-7 bg-white-zircon py-6">
@@ -75,32 +65,7 @@ const Home: React.FC = () => {
       {/* Shipping Details  */}
       <ShippingDetails />
       {/* Shipment Lines  */}
-      <div className="w-full flex flex-col items-center justify-start ">
-        {/* Heading  */}
-        <Wrapper styles="items-center justify-start py-4 bg-white-main rounded-md">
-          <Typography.PS
-            text="Shipment Lines"
-            additionalStyles="font-bold text-left w-full text-primary"
-          />
-        </Wrapper>
-        {/* Lines Table  */}
-        <div className="w-full flex flex-col items-center justify-start">
-          {/* Header  */}
-          <div className="w-full py-4 px-3 grid grid-cols-[1fr_1fr_2.5fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-3">
-            {tableHeader.map((item, index) => (
-              <Typography.Label
-                key={index}
-                text={item}
-                additionalStyles={`font-medium text-blue-riverbed`}
-              />
-            ))}
-          </div>
-          {/* Body  */}
-          <Wrapper styles="flex-col items-center justify-start bg-white-main rounded-md">
-            dd
-          </Wrapper>
-        </div>
-      </div>
+      <ShipmentLines />
     </Wrapper>
   );
 };

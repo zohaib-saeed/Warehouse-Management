@@ -30,6 +30,7 @@ module.exports = {
         },
         black: {
           main: '#000000',
+          mirage: '#101828',
         },
         white: {
           main: '#fff',

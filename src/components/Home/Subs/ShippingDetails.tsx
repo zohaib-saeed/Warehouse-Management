@@ -32,7 +32,7 @@ const ShippingDetails: React.FC = () => {
           </div>
           {/* ===> Status Desc  */}
           <div className="w-full flex items-center justify-between gap-2">
-            <Typography.Label text="Status Desc" additionalStyles="font-medium text-black-main" />
+            <Typography.Label text="Status Desc:" additionalStyles="font-medium text-black-main" />
             <Typography.Label text="Ready To Pack" additionalStyles="font-medium text-gray-storm" />
           </div>
         </div>
@@ -58,7 +58,7 @@ const ShippingDetails: React.FC = () => {
           </div>
           {/* ===> CNC  */}
           <div className="w-full flex items-center justify-between gap-2">
-            <Typography.Label text="CNC" additionalStyles="font-medium text-black-main" />
+            <Typography.Label text="CNC:" additionalStyles="font-medium text-black-main" />
             <Typography.Label text="N" additionalStyles="font-medium text-gray-storm" />
           </div>
         </div>
