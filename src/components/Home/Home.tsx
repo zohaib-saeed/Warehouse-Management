@@ -1,5 +1,13 @@
 import React from 'react';
-import { Breadcrumbs, ActionIcon, Input, Tooltip } from '@mantine/core';
+import {
+  Breadcrumbs,
+  ActionIcon,
+  Input,
+  Tooltip,
+  Tabs,
+  Badge,
+  useMantineTheme,
+} from '@mantine/core';
 import { BsArrowLeft as ArrowLeft } from 'react-icons/bs';
 import { AiOutlineScan as ScanIcon } from 'react-icons/ai';
 
@@ -11,8 +19,10 @@ import ShippingDetails from './Subs/ShippingDetails';
 import NextImage from '../Shared/NextImage';
 import Pagination from '../Shared/Pagination';
 import ShipmentLines from './Subs/ShipmentLines';
+import Containers from './Subs/Containers/Containers';
 
 const Home: React.FC = () => {
+  const theme = useMantineTheme();
   // Breadcrumbs
   const items = [
     { title: 'Home', href: '/' },
@@ -66,6 +76,8 @@ const Home: React.FC = () => {
       <ShippingDetails />
       {/* Shipment Lines  */}
       <ShipmentLines />
+      {/* Containers  */}
+      <Containers />
     </Wrapper>
   );
 };

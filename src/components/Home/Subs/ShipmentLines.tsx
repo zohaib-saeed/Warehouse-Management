@@ -29,7 +29,7 @@ const ShipmentLines: React.FC = () => {
     <React.Fragment>
       <div className="w-full flex flex-col items-center justify-start ">
         {/* Heading  */}
-        <Wrapper styles="items-center justify-start py-4 bg-white-main rounded-md">
+        <Wrapper styles="items-center justify-start py-4 bg-white-main rounded-t-md">
           <Typography.PS
             text="Shipment Lines"
             additionalStyles="font-bold text-left w-full text-primary"
@@ -48,7 +48,7 @@ const ShipmentLines: React.FC = () => {
             ))}
           </div>
           {/* Body  */}
-          <Wrapper styles="flex-col items-center justify-start bg-white-main rounded-md">
+          <Wrapper styles="flex-col items-center justify-start bg-white-main rounded-b-md">
             {[0, 1, 2, 3, 4].map((item, index) => (
               <div
                 key={index}
