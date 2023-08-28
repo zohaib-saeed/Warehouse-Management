@@ -5,14 +5,14 @@ const ShippingDetails: React.FC = () => {
   return (
     <div className="flex-col w-full flex items-center justify-start bg-white-main  rounded-md overflow-hidden">
       {/* Heading  */}
-      <div className="w-full flex items-center justify-start px-3 py-4 border-b-[1px] border-gray-amour">
+      <div className="w-full flex items-center justify-start px-3 py-3 mdl:py-4 border-b-[1px] border-gray-amour">
         <Typography.PS
           text="Shipping Details"
           additionalStyles="font-bold text-left w-full text-primary"
         />
       </div>
       {/* Details  */}
-      <div className="w-full grid grid-cols-3 gap-5 px-3 py-5 ">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 xl:gap-5 px-3 py-3 mdl:py-5 ">
         {/* Col 1  */}
         <div className="w-full px-4 py-4 flex flex-col items-center justify-start gap-3 bg-white-zircon rounded-md ">
           {/* ===> Shipment Number  */}
