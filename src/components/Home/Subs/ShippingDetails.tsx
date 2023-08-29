@@ -5,16 +5,16 @@ const ShippingDetails: React.FC = () => {
   return (
     <div className="flex-col w-full flex items-center justify-start bg-white-main  rounded-md overflow-hidden">
       {/* Heading  */}
-      <div className="w-full flex items-center justify-start px-3 py-3 mdl:py-4 border-b-[1px] border-gray-amour">
+      <div className="w-full flex items-center justify-start px-3 py-1 border-b-[1px] border-gray-amour">
         <Typography.PS
           text="Shipping Details"
           additionalStyles="font-bold text-left w-full text-primary"
         />
       </div>
       {/* Details  */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 xl:gap-5 px-3 py-3 mdl:py-5 ">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 xl:gap-5 px-3 py-2 ">
         {/* Col 1  */}
-        <div className="w-full px-4 py-4 flex flex-col items-center justify-start gap-3 bg-white-zircon rounded-md ">
+        <div className="w-full px-4 py-2 flex flex-col items-center justify-start gap-1 bg-white-zircon rounded-md ">
           {/* ===> Shipment Number  */}
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label text="Shipment No:" additionalStyles="font-medium text-black-main" />
@@ -37,7 +37,7 @@ const ShippingDetails: React.FC = () => {
           </div>
         </div>
         {/* Col 2  */}
-        <div className="w-full px-4 py-4 flex flex-col items-center justify-start gap-3 bg-white-zircon rounded-md ">
+        <div className="w-full px-4 py-2 flex flex-col items-center justify-start gap-1 bg-white-zircon rounded-md ">
           {/* ===> Concept  */}
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label text="Concept:" additionalStyles="font-medium text-black-main" />
@@ -63,7 +63,7 @@ const ShippingDetails: React.FC = () => {
           </div>
         </div>
         {/* Col 3  */}
-        <div className="w-full px-4 py-4 flex flex-col items-center justify-start gap-3 bg-white-zircon rounded-md ">
+        <div className="w-full px-4 py-2 flex flex-col items-center justify-start gap-1 bg-white-zircon rounded-md ">
           {/* ===> Location Ref  */}
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label text="Location Ref:" additionalStyles="font-medium text-black-main" />

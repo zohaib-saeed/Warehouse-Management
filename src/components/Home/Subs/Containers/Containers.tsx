@@ -11,12 +11,14 @@ const Containers: React.FC = () => {
   const theme = useMantineTheme();
 
   return (
-    <Wrapper styles="pt-4 bg-white-main rounded-md flex-col items-center justify-start gap-4 ">
-      <Typography.PS text="Containers" additionalStyles="font-bold text-left w-full text-primary" />
-      <Typography.PXS
-        text={`Total Containers: 2`}
-        additionalStyles="font-semibold text-black-mirage text-left w-full "
-      />
+    <Wrapper styles="pt-1 bg-white-main rounded-md flex-col items-center justify-start gap-2 ">
+      <div className="w-full flex items-center justify-between gap-4">
+        <Typography.PS text="Containers" additionalStyles="font-bold text-left text-primary" />
+        <Typography.PXS
+          text={`Total Containers: 2`}
+          additionalStyles="font-semibold text-black-mirage text-right"
+        />
+      </div>
       <Tabs
         defaultValue="1"
         className="w-full"
@@ -37,7 +39,7 @@ const Containers: React.FC = () => {
         }}
       >
         <ScrollArea type="always" className="w-full" scrollbarSize={4}>
-          <Tabs.List className="pb-4 pt-2 border-b-[1px] border-gray-amour gap-2">
+          <Tabs.List className="pb-2  border-b-[1px] border-gray-amour gap-2">
             <Tabs.Tab value="1">
               Container 1 <Badge className="bg-secondary text-white-main">2</Badge>
             </Tabs.Tab>

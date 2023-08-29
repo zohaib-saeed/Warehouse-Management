@@ -9,13 +9,13 @@ interface Props {
 
 const Container: React.FC<Props> = ({ containerNumber }) => {
   // Container Items
-  const containerItems = [0, 1, 2, 3, 4, 5];
+  const containerItems = [0, 1];
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-4 py-4">
+    <div className="w-full flex flex-col items-center justify-start gap-2 py-2">
       {/* Container Info  */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3 xl:gap-5">
         {/* Col 1  */}
-        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-3  lg:py-4">
+        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-1">
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label
               text={`Container ${containerNumber}:`}
@@ -28,7 +28,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
           </div>
         </div>
         {/* Col 2  */}
-        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-3 lg:py-4">
+        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-1">
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label
               text="Scanned Lines:"
@@ -38,7 +38,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
           </div>
         </div>
         {/* Col 3 */}
-        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-3 lg:py-4">
+        <div className="w-full bg-white-zircon rounded-md px-3 lg:px-4 py-1">
           <div className="w-full flex items-center justify-between gap-2">
             <Typography.Label text="Status:" additionalStyles="font-medium text-black-main" />
             <Typography.Label text="Open" additionalStyles="font-medium text-gray-storm" />
@@ -48,7 +48,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
       <ScrollArea type="always" scrollbarSize={4} className="w-full">
         <div className="w-full min-w-[750px] flex flex-col items-center justify-start ">
           {/* Table Head  */}
-          <div className="w-full grid grid-cols-4 gap-4 px-4 border-[1px] border-solid border-white-zircon bg-white-zircon py-4 rounded-t-md">
+          <div className="w-full grid grid-cols-4 gap-4 px-4 border-[1px] border-solid border-white-zircon bg-white-zircon py-1 rounded-t-md">
             <Typography.Label text="Item ID" additionalStyles={`font-medium text-blue-riverbed`} />
             <Typography.Label text="Quantity" additionalStyles={`font-medium text-blue-riverbed`} />
             <Typography.Label
@@ -65,7 +65,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
             {containerItems.map((item, index) => (
               <div
                 key={index}
-                className={`w-full grid grid-cols-4 gap-4 px-4 py-4 border-[1px] border-solid border-gray-amour border-t-0 ${
+                className={`w-full grid grid-cols-4 gap-4 px-4 py-2 border-[1px] border-solid border-gray-amour border-t-0 ${
                   index + 1 == containerItems.length && 'rounded-b-md'
                 }`}
               >
@@ -94,7 +94,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
           </div>
         </div>
       </ScrollArea>
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   );
 };

@@ -29,7 +29,7 @@ const ShipmentLines: React.FC = () => {
     <React.Fragment>
       <div className="w-full flex flex-col items-center justify-start ">
         {/* Heading  */}
-        <Wrapper styles="items-center justify-start py-3 mdl:py-4 bg-white-main rounded-md">
+        <Wrapper styles="items-center justify-start py-1 bg-white-main rounded-md">
           <Typography.PS
             text="Shipment Lines"
             additionalStyles="font-bold text-left w-full text-primary"
@@ -39,7 +39,7 @@ const ShipmentLines: React.FC = () => {
         <ScrollArea className="w-full " type="always" scrollbarSize={4}>
           <div className="w-full min-w-[1050px] flex flex-col items-center justify-start">
             {/* Header  */}
-            <div className="w-full py-3 mdl:py-4 px-3  mdl:px-4 grid grid-cols-[1fr_1.6fr_2.5fr_1fr_1fr_1fr_0.8fr_0.8fr_0.8fr] gap-2 mdl:gap-3">
+            <div className="w-full py-2 px-3  mdl:px-4 grid grid-cols-[1fr_1.6fr_2.5fr_1fr_1fr_1fr_0.8fr_0.8fr_0.8fr] gap-2 mdl:gap-3">
               {tableHeader.map((item, index) => (
                 <Typography.Label
                   key={index}
@@ -50,17 +50,17 @@ const ShipmentLines: React.FC = () => {
             </div>
             {/* Body  */}
             <Wrapper styles="flex-col items-center justify-start bg-white-main rounded-t-md">
-              {[0, 1, 2, 3, 4].map((item, index) => (
+              {[0, 1].map((item, index) => (
                 <div
                   key={index}
-                  className="w-full py-3 mdl:py-4 border-b-[1px] border-gray-amour grid grid-cols-[1fr_1.6fr_2.5fr_1fr_1fr_1fr_0.8fr_0.8fr_0.8fr] gap-2 mdl:gap-3 items-center"
+                  className="w-full py-2 border-b-[1px] border-gray-amour grid grid-cols-[1fr_1.6fr_2.5fr_1fr_1fr_1fr_0.8fr_0.8fr_0.8fr] gap-2 mdl:gap-3 items-center"
                 >
                   {/* Image  */}
                   <NextImage
                     onClick={open}
                     src="/images/sample.jpg"
                     alt=""
-                    styles="w-[60px] h-[60px] object-cover rounded overflow-hidden cursor-pointer"
+                    styles="w-[35px] h-[35px] object-cover rounded overflow-hidden cursor-pointer"
                   />
                   {/* Item Id  */}
                   <Typography.Label
@@ -113,9 +113,9 @@ const ShipmentLines: React.FC = () => {
           </div>
         </ScrollArea>
         {/* Pagination  */}
-        <div className="w-full flex items-center justify-center bg-white-main rounded-b-md py-6">
+        {/* <div className="w-full flex items-center justify-center bg-white-main rounded-b-md py-2">
           <Pagination />
-        </div>
+        </div> */}
       </div>
       <Modal
         centered

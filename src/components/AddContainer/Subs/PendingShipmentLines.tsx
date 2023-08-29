@@ -28,11 +28,11 @@ const PendingShipmentLines: React.FC = () => {
               />
             </div>
             {/* ===> Desc */}
-            <div className="w-full flex items-center justify-between gap-2">
+            <div className="w-full flex items-start justify-between gap-2">
               <Typography.Label text="Desc:" additionalStyles="font-medium text-black-main" />
               <Typography.Label
-                text="KAPPA Polo Neck T-Shirt Black"
-                additionalStyles="font-medium text-gray-storm"
+                text="KAPPA Polo Neck T-Shirt Black "
+                additionalStyles="font-medium text-gray-storm flex-1 text-right"
               />
             </div>
             {/* ===> Color  */}
