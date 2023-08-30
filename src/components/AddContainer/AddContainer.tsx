@@ -2,18 +2,24 @@ import React from 'react';
 import { Input } from '@mantine/core';
 
 import Wrapper from '../Shared/Wrapper';
-import Buttons from '../Shared/Buttons';
 import Topbar from './Subs/Topbar';
-import Typography from '../Shared/Typography';
 import PendingShipmentLines from './Subs/PendingShipmentLines';
+import Containers from './Subs/Containers/Containers';
 
 const AddContainer: React.FC = () => {
   return (
-    <Wrapper styles="flex-col items-center justify-start gap-7 bg-white-zircon pt-3 pb-6">
+    <Wrapper styles="flex-col items-center justify-start gap-3 bg-white-zircon pt-3 pb-6">
       {/* Searchbar + Add Container + Unpack + ClosePack */}
       <Topbar />
-      {/* Pending Shipment Lines  + Containers */}
-      <PendingShipmentLines />
+      <Wrapper styles="pt-1 pb-3 gap-4 bg-white-main rounded-md">
+        {/* Pending Shipment Lines  + Containers */}
+        <PendingShipmentLines />
+      </Wrapper>
+
+      <Wrapper styles=" py-1 gap-4 bg-white-main rounded-md">
+        {/* Container  */}
+        <Containers />
+      </Wrapper>
     </Wrapper>
   );
 };

@@ -7,7 +7,7 @@ import Buttons from '../../Shared/Buttons';
 
 const Topbar: React.FC = () => {
   return (
-    <Wrapper styles="items-start md:items-center justify-between flex-col md:flex-row mdl:justify-start gap-3 sm:gap-4 md:gap-8 mdl:gap-16 bg-white-main py-3 mdl:py-4 rounded-md">
+    <Wrapper styles="items-start md:items-center justify-between flex-col md:flex-row mdl:justify-start gap-3 bg-white-main py-[10px] rounded-md">
       <div className="flex items-center justify-start gap-1">
         <Input
           icon={<ScanIcon className="w-[20px] h-[20px]" />}

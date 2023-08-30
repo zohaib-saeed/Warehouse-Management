@@ -37,14 +37,14 @@ const Home: React.FC = () => {
   return (
     <Wrapper styles="flex-col items-center justify-start gap-2 bg-white-zircon pt-2 pb-6">
       {/* Top => Bread Crumbs + Back Button  */}
-      <Wrapper styles="items-center justify-start gap-7 mdl:gap-10 bg-white-main py-2 rounded-md">
+      <Wrapper styles="items-center justify-start gap-7 mdl:gap-10 bg-white-main py-1 rounded-md">
         <ActionIcon variant="transparent">
           <ArrowLeft className="text-gray-storm text-[20px]" />
         </ActionIcon>
         <Breadcrumbs>{items}</Breadcrumbs>
       </Wrapper>
       {/* Search field + Scan button + Unpack + Close Pack */}
-      <Wrapper styles="items-start md:items-center justify-between flex-col md:flex-row mdl:justify-start gap-3 sm:gap-4 md:gap-8 mdl:gap-16 bg-white-main py-2 rounded-md">
+      <Wrapper styles="items-start md:items-center justify-between flex-col md:flex-row mdl:justify-start gap-3 sm:gap-4 md:gap-8 mdl:gap-16 bg-white-main py-1 rounded-md">
         <div className="flex items-center justify-start gap-1">
           <Input
             icon={<ScanIcon className="w-[20px] h-[20px]" />}
