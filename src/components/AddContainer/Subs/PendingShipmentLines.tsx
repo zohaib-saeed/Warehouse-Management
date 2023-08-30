@@ -41,8 +41,8 @@ const PendingShipmentLines: React.FC = () => {
             breakpoints={[
               { maxWidth: 'sm', slideSize: '100%', slideGap: 'xs' },
               { minWidth: 'sm', slideSize: '100%', slideGap: 'xs' },
-              { minWidth: 'md', slideSize: '100%', slideGap: 'xs' },
-              { minWidth: 'lg', slideSize: '45%', slideGap: 'sm' },
+              { minWidth: 'md', slideSize: '50%', slideGap: 'xs' },
+              { minWidth: 'lg', slideSize: '33.33%', slideGap: 'sm' },
               { minWidth: 'xl', slideSize: '33.33%', slideGap: 'sm' },
             ]}
             classNames={{

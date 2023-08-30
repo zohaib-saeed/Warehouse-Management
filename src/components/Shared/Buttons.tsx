@@ -18,7 +18,7 @@ const Outlined: React.FC<ButtonProps> = ({
   text,
   styles,
   type = 'button',
-  event = () => {},
+  event,
 }: ButtonProps) => {
   return (
     <Button
@@ -41,7 +41,7 @@ const Filled: React.FC<ButtonProps> = ({
   text,
   styles,
   type = 'button',
-  event = () => {},
+  event,
 }: ButtonProps) => {
   return (
     <Button

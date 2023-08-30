@@ -5,7 +5,11 @@ import { AiOutlineScan as ScanIcon } from 'react-icons/ai';
 import Wrapper from '../../Shared/Wrapper';
 import Buttons from '../../Shared/Buttons';
 
-const Topbar: React.FC = () => {
+interface Props {
+  addContainerHandler: () => void;
+}
+
+const Topbar: React.FC<Props> = ({ addContainerHandler }) => {
   return (
     <Wrapper styles="items-start md:items-center justify-between flex-col md:flex-row mdl:justify-start gap-3 bg-white-main py-[10px] rounded-md">
       <div className="flex items-center justify-start gap-1">
@@ -28,6 +32,7 @@ const Topbar: React.FC = () => {
       </div>
       <div className="flex items-center justify-start gap-2 mdl:gap-4">
         <Buttons.Filled
+          event={addContainerHandler}
           text="Add Container"
           styles="text-gray-storm bg-gray-amour rounded h-[40px]"
         />

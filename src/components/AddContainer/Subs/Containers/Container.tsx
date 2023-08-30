@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '../../../Shared/Typography';
 import Pagination from '../../../Shared/Pagination';
-import { ScrollArea } from '@mantine/core';
+import { NumberInput } from '@mantine/core';
 import NextImage from '../../../Shared/NextImage';
 
 interface Props {
@@ -10,7 +10,8 @@ interface Props {
 
 const Container: React.FC<Props> = ({ containerNumber }) => {
   // Container Items
-  const containerItems = [0, 1];
+  // console.log(`active: ${containerNumber}`);
+
   return (
     <div className="w-full flex flex-col items-center justify-start gap-2 py-2">
       {/* Container Info  */}
@@ -47,9 +48,12 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
         </div>
       </div>
       {/* Cards  */}
-      <div className="w-full flex flex-col items-center justify-start gap-1">
+      <div className="w-full flex flex-col items-center justify-start ">
         {[0, 1].map((item, index) => (
-          <div key={index} className="w-full grid grid-cols-[1fr_3fr_3fr_3fr] gap-3">
+          <div
+            key={index}
+            className="w-full border-b-2 border-gray-amour py-3 md:py-[12px] lg:py-[6px] grid grid-col-1 md:grid-cols-2 lg:grid-cols-[1fr_3fr_3fr_3fr] gap-[6px] xl:gap-3"
+          >
             {/* Col 1 */}
             <NextImage
               src="/images/sample.png"
@@ -72,7 +76,7 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
                   additionalStyles="font-medium text-gray-storm  text-right flex-1"
                 />
               </div>
-              <div className="w-full flex items-center justify-between gap-2">
+              <div className="w-full flex items-start justify-between gap-2">
                 <Typography.Label text="Desc:" additionalStyles="font-medium text-black-main" />
                 <Typography.Label
                   text="Black Cotton T-shirt perfect for summer"
@@ -155,9 +159,17 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
                   text="Passed  Qty"
                   additionalStyles="font-medium text-black-main"
                 />
-                <Typography.Label
-                  text="1"
-                  additionalStyles="font-medium text-gray-storm  text-right flex-1"
+                <NumberInput
+                  placeholder="0"
+                  radius="md"
+                  size="md"
+                  type="number"
+                  hideControls
+                  classNames={{
+                    wrapper: '  text-gray-storm',
+                    input:
+                      'px-2 border-2 max-w-[80px] border-solid bg-white-zircon bg-opacity-0 border-gray-storm focus:outline-0 focus:border-gray-storm text-base h-[20px] min-h-[27px] font-normal rounded text-gray-storm placeholder:text-gray-storm !font-medium placeholder:font-medium',
+                  }}
                 />
               </div>
               <div className="w-full flex items-center justify-between gap-2">
@@ -165,9 +177,17 @@ const Container: React.FC<Props> = ({ containerNumber }) => {
                   text="Failed  Qty"
                   additionalStyles="font-medium text-black-main"
                 />
-                <Typography.Label
-                  text="1"
-                  additionalStyles="font-medium text-gray-storm  text-right flex-1"
+                <NumberInput
+                  placeholder="0"
+                  radius="md"
+                  size="md"
+                  type="number"
+                  hideControls
+                  classNames={{
+                    wrapper: '  text-gray-storm',
+                    input:
+                      'px-2 border-2 max-w-[80px] border-solid bg-white-zircon bg-opacity-0 border-gray-storm focus:outline-0 focus:border-gray-storm text-base h-[20px] min-h-[27px] font-normal rounded text-gray-storm placeholder:text-gray-storm !font-medium placeholder:font-medium',
+                  }}
                 />
               </div>
             </div>
